@@ -4,7 +4,6 @@
 #define pin4 9
 #define pin5 10
 #define pin6 11
-#define pin7 12
 
 const long interval1 = 7000000;
 const long interval2 = 6500000;
@@ -12,7 +11,6 @@ const long interval3= 5500000;
 const long interval4 = 4500000;
 const long interval5 = 3500000;
 const long interval6 = 2500000;
-const long interval7 = 1500000;
 
 unsigned long previousMicros1=0;
 unsigned long previousMicros2=0;
@@ -20,7 +18,6 @@ unsigned long previousMicros3=0;
 unsigned long previousMicros4=0;
 unsigned long previousMicros5=0;
 unsigned long previousMicros6=0;
-unsigned long previousMicros7=0;
 
 int pin1State=LOW;
 int pin2State=LOW;
@@ -28,7 +25,6 @@ int pin3State=LOW;
 int pin4State=LOW;
 int pin5State=LOW;
 int pin6State=LOW;
-int pin7State=LOW;
 
 
 void setup() {
@@ -38,7 +34,6 @@ void setup() {
   pinMode(pin4,OUTPUT);
   pinMode(pin5,OUTPUT);
   pinMode(pin6,OUTPUT);
-  pinMode(pin7,OUTPUT);
 }
 
 void loop() {
@@ -96,14 +91,5 @@ void loop() {
       pin6State=LOW;
       }    
     digitalWrite(pin6,pin6State);
-  }
-  if(currentMicros-previousMicros7>=interval7){
-    previousMicros7=currentMicros;
-    if(pin7State==LOW){
-      pin7State=HIGH;  
-    }else{
-      pin7State=LOW;
-      }    
-    digitalWrite(pin7,pin7State);
   }
 }
