@@ -5,12 +5,12 @@
 #define pin5 10
 #define pin6 11
 
-const long interval1 = 7000000;
-const long interval2 = 6500000;
-const long interval3= 5500000;
-const long interval4 = 4500000;
-const long interval5 = 3500000;
-const long interval6 = 2500000;
+const long interval1 = 1000000;
+const long interval2 = 100;
+const long interval3 = 1000;
+const long interval4 = 10000;
+const long interval5 = 100000;
+const long interval6 = 1500000;
 
 unsigned long previousMicros1=0;
 unsigned long previousMicros2=0;
